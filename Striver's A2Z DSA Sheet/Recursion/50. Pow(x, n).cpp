@@ -24,15 +24,18 @@ public:
 //Space: O(logn)
 class Solution {
 public:
-    double myPow(double x, int num) {
-        long n = static_cast<long>(num);
+    double myPow(double x, int n) 
+    {
         if(n==0) return 1;
-        if (n < 0) {
-            x = 1 / x;
-            n = -n;
+        if(n<0) {
+            n = abs(n);
+            x = 1/x;
         }
-        double half = myPow(x, n/2);
-        if(n%2==0) return half * half;
-        return half * half * x;
+        if(n%2==0){
+            return myPow(x*x, n/2);
+        }
+        else{
+            return x*myPow(x, n-1);
+        }
     }
 };
