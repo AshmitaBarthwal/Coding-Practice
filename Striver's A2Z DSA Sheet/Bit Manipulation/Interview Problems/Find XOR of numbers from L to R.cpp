@@ -1,6 +1,7 @@
 // https://www.geeksforgeeks.org/problems/find-xor-of-numbers-from-l-to-r/1  
 
 
+//Brute: Using Bit Manipulation
 //Time: O(1)
 //Space: O(1)
 class Solution {
