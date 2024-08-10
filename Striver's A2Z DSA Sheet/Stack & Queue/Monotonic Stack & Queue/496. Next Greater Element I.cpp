@@ -1,6 +1,7 @@
 // https://leetcode.com/problems/next-greater-element-i/description/
 
 
+
 //Brute: For each element in nums1 find equal element in nums2 and then look for greater element in rest of nums2
 //Time: O(n* m^2)
 //Space: O(n)
