@@ -28,12 +28,7 @@ public:
 };
 
 
-//Better: Run a loop of i from 2*n to 0, the index of the element will be i % n,
-//if the stack is empty the result[i] = -1, as the element has no greater element
-//if the top of stack is greater than element then result[i] = st.top()
-//if the top is less than the element, then while the top is less, keep popping the elements
-//if after popping stack is empty then result[i] = -1
-//else result[i] = st.top()
+//Better
 //Time: O(n)
 //Space: O(n)
 class Solution {
