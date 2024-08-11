@@ -1,11 +1,9 @@
 // https://leetcode.com/problems/next-greater-element-ii/description/
 
 
-//Brute: Use first loop for each element in nums, second loop to find the first greater element 
-//If in second loop j reaches n, then move j to 0
-//The inner will continue till it finds the greater element or till it reaches back to i
-//Time: O(n^2)
-//Space: O(1)
+//Brute
+//TC: O(n^2)
+//SC: O(1)
 class Solution {
 public:
     vector<int> nextGreaterElements(vector<int>& nums) {
