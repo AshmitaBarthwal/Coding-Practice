@@ -1,12 +1,7 @@
 // https://leetcode.com/problems/implement-stack-using-queues/description/
 
 
-//Brute: Using 2 queues, push elements onto q1
-//when you need to pop, push all elements except last one from q1 to q2
-//pop the last element from q1
-//copy all the elements from q2 to q1
-//for top return top simply return q1.back(), and to check empty return q1.empty()
-//empty q1
+//Brute
 //Time: O(n)
 //Space: O(n)
 class MyStack {
