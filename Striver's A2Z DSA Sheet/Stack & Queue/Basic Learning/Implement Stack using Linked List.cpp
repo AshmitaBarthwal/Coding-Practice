@@ -1,8 +1,7 @@
 // https://www.geeksforgeeks.org/problems/implement-stack-using-linked-list/1
 
 
-//Brute: To push insert at the beginning of the linked list
-//To pop, pop from the beginning
+//Brute
 //Time: O(1)
 //Space: O(n)
 #include <bits/stdc++.h>
