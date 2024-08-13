@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/min-stack/description/
 
 
-//Brute: Use 2 stacks, one to store all elements, other to store minimum elements
+//Brute
 //Time: O(1)
 //Space: O(n)
 class MinStack {
