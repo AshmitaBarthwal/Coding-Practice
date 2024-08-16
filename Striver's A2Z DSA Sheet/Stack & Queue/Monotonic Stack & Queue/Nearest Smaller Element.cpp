@@ -1,7 +1,7 @@
 // https://www.interviewbit.com/problems/nearest-smaller-element/
 
 
-//Brute: Traverse nums from the back, for each element find the element smaller on the left
+//Brute
 //Time: O(n^2)
 //Space: O(1)
 vector<int> Solution::prevSmaller(vector<int> &nums) {
@@ -22,11 +22,7 @@ vector<int> Solution::prevSmaller(vector<int> &nums) {
 }
 
 
-//Better: Traverse the array, check if stack is empty then result[i] = -1;
-//if it is not empty, while the stack is not empty and the top is >= nums[i] -> st.pop()
-//check if stack is empty then result[i] = -1
-//else result[i] = st.top()
-//push nums[i] in stack
+//Better
 //Time: O(n)
 //Space: O(n)
 vector<int> Solution::prevSmaller(vector<int> &nums) {
