@@ -40,11 +40,7 @@ public:
 
 
 
-//Better: Using 1 queue, push all the elements in q
-//When you need to pop, push the front element of the queue into the queue
-//Pop the front element, do this for q.size()-1 times
-//finally the front element will be the top element, pop it and return it
-//for top return top simply return q.back(), and to check empty return q.empty()
+//Better
 //Time: O(n)
 //Space: O(n)
 class MyStack {
