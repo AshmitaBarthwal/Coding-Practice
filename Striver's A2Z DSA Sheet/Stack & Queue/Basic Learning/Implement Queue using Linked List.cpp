@@ -56,7 +56,6 @@ int main()
 }
 
 
-//Function to push an element into the queue.
 void MyQueue:: push(int x){
         QueueNode* newnode = new QueueNode(x);
         if(!front) front = rear = newnode;
@@ -66,7 +65,6 @@ void MyQueue:: push(int x){
         }
 }
 
-//Function to pop front element from the queue.
 int MyQueue :: pop(){
         if(!front) return -1;
         
