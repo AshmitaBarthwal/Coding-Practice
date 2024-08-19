@@ -20,13 +20,11 @@ public :
 };
  */
 
-//Function to push an element x in a queue.
 void MyQueue :: push(int x){
        rear++;
        arr[rear-1] = x;
 }
 
-//Function to pop an element from queue and return that element.
 int MyQueue :: pop(){
         if(front != rear){
             int x = arr[front];
