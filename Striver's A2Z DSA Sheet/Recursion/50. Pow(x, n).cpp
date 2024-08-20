@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/powx-n/description/
 
 
-//Brute: Multiplying x by itself n times
+//Brute
 //Time: O(n)
 //Space: O(logn)
 class Solution {
@@ -19,7 +19,7 @@ public:
 };
 
 
-//Better: Using recursion
+//Better
 //Time: O(logn)
 //Space: O(logn)
 class Solution {
