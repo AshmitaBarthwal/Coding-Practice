@@ -7,7 +7,8 @@
 #include <string>
 using namespace std;
 
-int main(){
+int main()
+{
     unordered_map<string, int> mp;
     mp["Tetrahedron"] = 4;
     mp["Cube"] = 6;
@@ -25,7 +26,6 @@ int main(){
             faces += mp[str];
         }
     }
-
     cout << faces << endl;
     return 0;
 }
