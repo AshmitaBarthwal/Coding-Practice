@@ -7,16 +7,15 @@ using namespace std;
 int main() {
     long long k, l;
     cin >> k >> l;
-
-    int importance = 0;
+    int imp = 0;
     while (l % k == 0) {
         l /= k;
-        importance++;
+        imp++;
     }
 
     if (l == 1) {
         cout << "YES" << endl;
-        cout << importance - 1 << endl;
+        cout << imp - 1 << endl;
     } else {
         cout << "NO" << endl;
     }
