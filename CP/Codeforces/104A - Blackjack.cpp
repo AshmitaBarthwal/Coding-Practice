@@ -1,8 +1,8 @@
 // https://codeforces.com/problemset/problem/104/A
 
+
 #include <iostream>
 using namespace std;
-
 int main()
 {
     int n;
