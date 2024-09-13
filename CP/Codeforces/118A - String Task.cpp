@@ -11,7 +11,6 @@ int main(){
     string str;
     cin >> str;
     string result = "";
-
     string vowel = "aeiyouAEIOYU";
     for(char ch : str){
         if(vowel.find(ch) == string::npos){
