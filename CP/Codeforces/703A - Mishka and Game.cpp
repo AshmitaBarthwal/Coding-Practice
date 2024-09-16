@@ -3,17 +3,18 @@
 
 #include <iostream>
 using namespace std;
-
 int main() {
     int n;
     cin >> n;
     int m, c, ms = 0, cs = 0;
-    
-    for(int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++) 
+    {
         cin >> m >> c;
         if(m > c) {
             ms++;
-        } else if(c > m) {
+        } 
+        else if(c > m) 
+        {
             cs++;
         }
         // No need to handle the case when m == c, as no points are awarded
