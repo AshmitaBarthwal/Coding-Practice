@@ -12,11 +12,13 @@ int main() {
         l /= k;
         imp++;
     }
-
-    if (l == 1) {
+    if (l == 1)
+    {
         cout << "YES" << endl;
         cout << imp - 1 << endl;
-    } else {
+    } 
+    else 
+    {
         cout << "NO" << endl;
     }
 
