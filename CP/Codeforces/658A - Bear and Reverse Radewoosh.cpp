@@ -7,24 +7,26 @@
 
 using namespace std;
 
-int main() {
+int main() 
+{
     int n, c;
     cin >> n >> c;
 
     vector<int> p(n), t(n);  
-
     for (int i = 0; i < n; i++) cin >> p[i];
     for (int i = 0; i < n; i++) cin >> t[i];
 
     int limak_score = 0, radewoosh_score = 0;
     int limak_time = 0, radewoosh_time = 0;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) 
+    {
         limak_time += t[i];
         limak_score += max(0, p[i] - c * limak_time);
     }
 
-    for (int i = n - 1; i >= 0; i--) {
+    for (int i = n - 1; i >= 0; i--) 
+    {
         radewoosh_time += t[i];
         radewoosh_score += max(0, p[i] - c * radewoosh_time);
     }
