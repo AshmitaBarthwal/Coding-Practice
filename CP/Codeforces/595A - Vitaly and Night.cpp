@@ -21,7 +21,6 @@ int main()
         {
             for(j=2;j<=2*m;j+=2)
             {
-
                     if(a[i][j]!=0 ||a[i][j-1]!=0)
                     ans++;
             }
