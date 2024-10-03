@@ -6,7 +6,8 @@
 #include <algorithm>
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
 
@@ -15,7 +16,8 @@ int main(){
 
     int max_len = 0, j = 0, i;
     for(i=1;i<n;i++){
-        if(arr[i] <= arr[i-1]){
+        if(arr[i] <= arr[i-1])
+        {
             max_len = max(max_len, i-j);
             j = i;
         }
