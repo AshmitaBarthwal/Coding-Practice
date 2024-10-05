@@ -4,15 +4,19 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main() 
+{
     long long n, k;
     cin >> n >> k;
 
     long long moves = n / k;
 
-    if (moves % 2 == 1) {
+    if (moves % 2 == 1) 
+    {
         cout << "YES" << endl;
-    } else {
+    } 
+    else 
+    {
         cout << "NO" << endl;
     }
 
