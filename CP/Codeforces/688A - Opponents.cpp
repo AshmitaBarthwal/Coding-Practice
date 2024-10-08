@@ -2,12 +2,14 @@
 
 #include<iostream>
 using namespace std;
-int main(){
+int main()
+{
     int n,d;
     cin >> n >> d;
 
     int count = 0, maxCount = 0;
-    for (int i = 0; i < d; ++i) {
+    for (int i = 0; i < d; ++i) 
+    {
         string str;
         cin >> str;
 
