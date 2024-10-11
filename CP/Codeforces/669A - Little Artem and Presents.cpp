@@ -3,7 +3,8 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
     int n;
     cin >> n;
 
@@ -11,7 +12,8 @@ int main() {
     int rem = n % 3;
 
     int mx = 2 * full;
-    if (rem != 0) {
+    if (rem != 0) 
+    {
         mx += 1;
     }
 
