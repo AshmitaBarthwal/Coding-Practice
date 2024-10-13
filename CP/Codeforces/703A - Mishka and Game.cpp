@@ -3,28 +3,34 @@
 
 #include <iostream>
 using namespace std;
-int main() {
+int main() 
+{
     int n;
     cin >> n;
     int m, c, ms = 0, cs = 0;
     for(int i = 0; i < n; i++) 
     {
         cin >> m >> c;
-        if(m > c) {
+        if(m > c) 
+        {
             ms++;
         } 
         else if(c > m) 
         {
             cs++;
         }
-        // No need to handle the case when m == c, as no points are awarded
     }
     
-    if(ms > cs) {
+    if(ms > cs) 
+    {
         cout << "Mishka" << endl;
-    } else if(cs > ms) {
+    } 
+    else if(cs > ms) 
+    {
         cout << "Chris" << endl;
-    } else {
+    } 
+    else 
+    {
         cout << "Friendship is magic!^^" << endl;
     }
     
