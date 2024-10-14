@@ -3,13 +3,14 @@
 
 #include <iostream>
 using namespace std;
-
-int main() {
+int main() 
+{
     int n;
     cin >> n;
 
     int positive_x = 0, negative_x = 0;
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i) 
+    {
         int x, y;
         cin >> x >> y;
         if (x > 0)
@@ -17,9 +18,9 @@ int main() {
         else if (x < 0)
             negative_x++;
     }
-
     // Check if there is at most one point on one side of the OY axis
-    if (positive_x <= 1 || negative_x <= 1) {
+    if (positive_x <= 1 || negative_x <= 1) 
+    {
         cout << "Yes" << endl;
     } else {
         cout << "No" << endl;
