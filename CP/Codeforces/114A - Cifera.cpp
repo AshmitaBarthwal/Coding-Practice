@@ -3,12 +3,13 @@
 
 #include <iostream>
 using namespace std;
-
-int main() {
+int main() 
+{
     long long k, l;
     cin >> k >> l;
     int imp = 0;
-    while (l % k == 0) {
+    while (l % k == 0) 
+    {
         l /= k;
         imp++;
     }
