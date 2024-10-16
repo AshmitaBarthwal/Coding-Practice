@@ -5,20 +5,24 @@
 #include <algorithm>
 using namespace std;
 
-int main() {
+int main() 
+{
     int a, b, n;
     cin >> a >> b >> n;
 
-    while (true) {
+    while (true) 
+    {
         int simonMove = __gcd(a, n);
-        if (n < simonMove) {
+        if (n < simonMove) 
+        {
             cout << "1" << endl;
             break;
         }
         n -= simonMove;
 
         int antisimonMove = __gcd(b, n);
-        if (n < antisimonMove) {
+        if (n < antisimonMove) 
+        {
             cout << "0" << endl;
             break;
         }
