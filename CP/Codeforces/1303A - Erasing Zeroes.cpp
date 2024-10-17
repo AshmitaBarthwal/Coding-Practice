@@ -7,14 +7,14 @@
 #include <algorithm>
 using namespace std;
 
-int main(){
+int main()
+{
     int t;
     cin >> t;
     while(t--)
     {
         string str;
         cin >> str;
-
         int n = str.length();
         int left = -1, right = n;
 
