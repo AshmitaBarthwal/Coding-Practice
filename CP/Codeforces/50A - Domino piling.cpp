@@ -3,8 +3,8 @@
 
 #include <iostream>
 using namespace std;
-
-int main() {
+int main() 
+{
     int M, N;
     cin >> M >> N;
     int max_dominoes = (M * N) / 2;
