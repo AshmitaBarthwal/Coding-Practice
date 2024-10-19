@@ -7,13 +7,15 @@
 
 using namespace std;
 
-int main() {
+int main() 
+{
     string question;
     getline(cin, question); 
     string vowels = "AEIOUYaeiouy";
     for (int i = question.length() - 2; i >= 0; --i) 
     {  
-        if (isalpha(question[i])) {
+        if (isalpha(question[i])) 
+        {
             if (vowels.find(question[i]) != string::npos) 
             {
                 cout << "YES" << endl;
