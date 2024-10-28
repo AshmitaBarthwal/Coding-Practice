@@ -7,7 +7,7 @@ int main()
 {
     int M, N;
     cin >> M >> N;
-    int max_dominoes = (M * N) / 2;
-    cout << max_dominoes << endl;
+    int maxi = (M * N) / 2;
+    cout << maxi << endl;
     return 0;
 }
