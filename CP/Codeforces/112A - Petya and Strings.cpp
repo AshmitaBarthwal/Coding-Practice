@@ -8,7 +8,8 @@
 #include <cctype>
 using namespace std;
 
-int main(){
+int main()
+{
     string s1,s2;
     cin >> s1 >> s2;
     transform(s1.begin(), s1.end(), s1.begin(), ::tolower);
@@ -19,7 +20,9 @@ int main(){
         if(int(s1[i]) > int(s2[i])){
             result = 1;
             break;
-        }else if(int(s1[i]) < int(s2[i])){
+        }
+        else if(int(s1[i]) < int(s2[i]))
+        {
             result = -1;
             break;
         }
