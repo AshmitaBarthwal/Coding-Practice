@@ -23,5 +23,6 @@ int main()
     }
     
     cout << "EASY" << endl;
+    
     return 0;
 }
