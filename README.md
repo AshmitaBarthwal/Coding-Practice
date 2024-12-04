@@ -1,3 +1,3 @@
 # Coding Practice Solutions
 
-Welcome to my **Coding Practice Solutions** repository! This repository contains solutions to various coding problems I have practiced across multiple platforms like LeetCode, Codeforces and GFG. The solutions are implemented in **C++**.
+Welcome to my **Coding Practice Solutions** repository! This repository contains solutions to various coding problems I have practiced across platforms like LeetCode, Codeforces and GFG. The solutions are implemented in **C++**.
