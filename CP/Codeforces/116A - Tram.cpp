@@ -5,7 +5,8 @@
 #include <algorithm>
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
     vector<vector<int>> mat(n, vector<int>(2, 0));
@@ -14,7 +15,8 @@ int main(){
     }
 
     int curr = mat[0][1], d = curr;
-    for(int i=1;i<n;i++){
+    for(int i=1;i<n;i++)
+    {
         curr -= mat[i][0];
         curr += mat[i][1];
         d = max(d, curr);
