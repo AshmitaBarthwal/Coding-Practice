@@ -1,0 +1,69 @@
+//https://codeforces.com/problemset/problem/300/A
+
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<int> arr(n);
+    vector<int> negative, positive, zero;
+
+    // Read the input
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+        if (arr[i] < 0) {
+            negative.push_back(arr[i]);
+        } else if (arr[i] > 0) {
+            positive.push_back(arr[i]);
+        } else {
+            zero.push_back(arr[i]);
+        }
+    }
+
+    // First set: one negative number
+    vector<int> set1 = {negative.back()};
+    negative.pop_back();
+
+    // Second set: ensure product > 0
+    vector<int> set2;
+    if (!positive.empty()) {
+        set2.push_back(positive.back());
+        positive.pop_back();
+    } else {
+        // Use two negatives if no positive numbers are available
+        set2.push_back(negative.back());
+        negative.pop_back();
+        set2.push_back(negative.back());
+        negative.pop_back();
+    }
+
+    // Third set: remaining numbers
+    vector<int> set3 = zero;
+    while (!negative.empty()) {
+        set3.push_back(negative.back());
+        negative.pop_back();
+    }
+    while (!positive.empty()) {
+        set3.push_back(positive.back());
+        positive.pop_back();
+    }
+
+    // Output the sets
+    cout << set1.size();
+    for (int x : set1) cout << " " << x;
+    cout << endl;
+
+    cout << set2.size();
+    for (int x : set2) cout << " " << x;
+    cout << endl;
+
+    cout << set3.size();
+    for (int x : set3) cout << " " << x;
+    cout << endl;
+
+    return 0;
+}
