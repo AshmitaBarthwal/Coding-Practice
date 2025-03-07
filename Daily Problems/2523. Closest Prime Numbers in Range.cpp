@@ -4,9 +4,7 @@
 
 class Solution {
 public:
-    vector<int> closestPrimes(int left, int right) 
-    {
-     vector<bool> sieveHelper(int right) {
+    vector<bool> sieveHelper(int right) {
         vector<bool> isPrime(right+1, true);
 
         isPrime[0] = false;
