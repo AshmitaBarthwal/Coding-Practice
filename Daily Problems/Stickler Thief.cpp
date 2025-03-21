@@ -5,16 +5,15 @@ class Solution {
   public:
     int findMaxSum(vector<int>& arr) 
     {
-        int n=arr.size();
-        int maxi=INT_MIN;
-        int sum1=0;
-        int sum2=0;
-        for(int i=0;i<n;i++){
-            sum1=sum1+arr[2*i];
-            sum2=sum2+arr[(2*i)+1];
-            
+        int n=(int)arr.size();
+        int a=0;
+        int b=0;
+        for(int i=n-1;i>=0;i--)
+        {
+            int c=max(a,arr[i]+b);
+            b=a;
+            a=c;
         }
-        maxi=max(sum1,sum2);
-        return maxi;
+        return a;
     }
 };
