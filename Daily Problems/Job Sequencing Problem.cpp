@@ -3,35 +3,41 @@
 
 
 class Solution {
-  public:
-    vector<int> jobSequencing(vector<int> &deadline, vector<int> &profit) 
-    {
-         vector<pair<int,int>> v;
+public:
+    vector<int> jobSequencing(vector<int> &deadline, vector<int> &profit) {
         int n = deadline.size();
-        int maxProfit = 0 , maxJobs = 0;
-        for(int i = 0 ; i < n ; i ++)
-            v.push_back({profit[i],deadline[i]});
-        sort(v.begin(),v.end(),[](pair<int,int> &a, pair<int,int> &b){
-            return a.first > b.first;
-        });
-        vector<int> hashArray(*max_element(deadline.begin(),deadline.end()) + 1,-1);
-        
-        for(int i = 0 ; i < n ; i++){
-            int k = v[i].second;
-            while(true){
-                if(hashArray[k] == -1){
-                    hashArray[k] = i;
-                    maxProfit += v[i].first;
-                    maxJobs++;
-                    break;
-                } else {
-                    k--;
-                    if(k == 0)
-                        break;
-                }
+        vector<pair<int, int>> jobs(n);
+
+        int maxDays = 0;
+        for (int i = 0; i < n; i++) {
+            jobs[i] = {profit[i], deadline[i]};
+            maxDays = max(maxDays, deadline[i]);
+        }
+
+        sort(jobs.rbegin(), jobs.rend()); // Sort jobs in decreasing order of profit
+
+        vector<int> parent(maxDays + 1);
+        for (int i = 0; i <= maxDays; i++) parent[i] = i; // Initialize disjoint set
+
+        // Disjoint Set Find Function with Path Compression
+        function<int(int)> find = [&](int day) {
+            if (parent[day] == day) return day;
+            return parent[day] = find(parent[day]);
+        };
+
+        int jobCount = 0, maxProfit = 0;
+
+        for (auto& job : jobs) {
+            int p = job.first, d = job.second;
+
+            int availableDay = find(d); // Find closest available day
+            if (availableDay > 0) {
+                parent[availableDay] = find(availableDay - 1); // Update parent (union)
+                jobCount++;
+                maxProfit += p;
             }
         }
-        
-        return {maxJobs,maxProfit};
+
+        return {jobCount, maxProfit};
     }
 };
