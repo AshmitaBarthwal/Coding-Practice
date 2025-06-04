@@ -4,11 +4,8 @@
 
 class Solution {
   public:
-    int lcsOf3(string& s1, string& s2, string& s3) 
-    {
-      int f(int i,int j,int k,string &s1,string &s2,string &s3,vector<vector<vector<int>>>&dp){
-      if(i>=s1.size() || j>=s2.size() || k>=s3.size())
-      {
+  int f(int i,int j,int k,string &s1,string &s2,string &s3,vector<vector<vector<int>>>&dp){
+      if(i>=s1.size() || j>=s2.size() || k>=s3.size()){
           return 0;
       }
       if(dp[i][j][k]!=-1) return dp[i][j][k];
@@ -22,10 +19,10 @@ class Solution {
       return dp[i][j][k]=max(take,notTake);
       
   }
-    int lcsOf3(string& s1, string& s2, string& s3) 
-    {
+    int lcsOf3(string& s1, string& s2, string& s3) {
         int m=s1.size(),n=s2.size(),o=s3.size();
         vector<vector<vector<int>>>dp(m+1,vector<vector<int>>(n+1,vector<int>(o+1,-1)));
         return f(0,0,0,s1,s2,s3,dp);
+        
     }
 };
