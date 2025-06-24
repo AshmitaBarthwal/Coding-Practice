@@ -3,7 +3,8 @@
 
 
 
-class Solution {
+class Solution 
+{
 public:
     int find(vector<int>& tops, vector<int>& bottoms, int val) {
         int n = tops.size();
