@@ -6,22 +6,29 @@ class Solution {
 public:
     int maximumLength(vector<int>& nums)
     {
-        int n = nums.size();
-        if (n == 0) return 0;
+        int allev = 0, allodd = 0, oddev = 0;
 
-        int maxLength = 1;
-        int currentLength = 1;
-
-        for (int i = 1; i < n; ++i) {
-            // Check the parity condition between current element and the previous element
-            if ((nums[i] + nums[i - 1]) % 2 == (nums[i - 1] + nums[i - 2]) % 2) {
-                currentLength++;
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] % 2 == 0) {
+                allev++;
             } else {
-                currentLength = 2; // Start a new subsequence from the last two elements
+                allodd++;
             }
-            maxLength = max(maxLength, currentLength);
+        }
+        bool expectOdd = true;
+        bool expectEven = true;
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] % 2 == 0 && expectEven) {
+                oddev++;
+                expectEven = false;
+                expectOdd = true;
+            } else if (nums[i] % 2 != 0 && expectOdd) {
+                oddev++;
+                expectOdd = false;
+                expectEven = true;
+            }
         }
 
-        return maxLength;
+        return max({allev, allodd, oddev});
     }
 };
